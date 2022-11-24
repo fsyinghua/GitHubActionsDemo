@@ -110,3 +110,14 @@ jobs:
       with:
         name: OpenWrt
         path: openwrt/bin
+
+      -
+        name: wechat work send message
+        uses: ntfs32/wework@v0.1.0-alpha
+        with:
+          WEWORK_USERLIST: ${{ secrets.WEWORK_USERLIST }}
+          WEWORK_CORPID: ${{ secrets.WEWORK_CORPID }}
+          WEWORK_AGENTID: ${{ secrets.WEWORK_AGENTID }}
+          WEWORK_APPSECRET: ${{ secrets.WEWORK_APPSECRET }}
+          WEWORK_TOUSER: ${{ secrets.WEWORK_TOUSER }}
+          WEWORK_CONTENT: "Job Finished"
